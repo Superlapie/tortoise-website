@@ -1,13 +1,14 @@
 # Tortoise product website
 
-The marketing site for [Tortoise](https://github.com/superlapie/tortoise), a transparent, safety-first Windows driver inventory and update utility.
+The product website for [Tortoise](https://github.com/Superlapie/Tortoise), a transparent, safety-first Windows driver inventory and update utility.
 
 ## Stack
 
 - Next.js App Router with React and TypeScript
 - pnpm for package management
 - Tailwind CSS 4.3 with a CSS-first theme and project-specific art direction
-- Vercel deployment configuration and GitHub Actions CI
+- Static HTML export for Cloudflare Pages
+- GitHub Actions CI
 
 ## Local development
 
@@ -26,11 +27,21 @@ pnpm typecheck
 pnpm build
 ```
 
-## Deployment
+`pnpm build` creates the static site in `out/`.
 
-Import this GitHub repository into Vercel and set `main` as the production branch. Vercel's Git integration will create preview deployments for pull requests and deploy merges to `main`. The repo includes a `vercel.json` with the Next.js framework, pnpm frozen-lockfile install, and production build settings.
+## Cloudflare Pages deployment
 
-Vercel Hobby is restricted to personal, non-commercial use. Tortoise is a commercial product website, so deploy it on a Pro or Enterprise account.
+Connect this repository through **Workers & Pages → Create application → Pages → Connect to Git**. Choose `main` as the production branch and use:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `pnpm build` |
+| Build output directory | `out` |
+| `NODE_VERSION` | `22.23.2` |
+| `PNPM_VERSION` | `11.22.0` |
+| `NEXT_PUBLIC_SITE_URL` | Optional custom production URL, such as `https://tortoise.example.com` |
+
+Cloudflare Pages Git integration deploys production changes from `main` and creates preview deployments for other branches and pull requests. Cloudflare's `CF_PAGES_URL` supplies the deployment hostname for metadata. Set `NEXT_PUBLIC_SITE_URL` only when using a custom domain.
 
 ## Artwork and UI preview
 

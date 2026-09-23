@@ -2,9 +2,10 @@ node_modules/
 .next/
 out/
 build/
-.vercel/
+.wrangler/
 .env*
 !.env.example
+!.dev.vars.example
 *.log
 .DS_Store
 coverage/

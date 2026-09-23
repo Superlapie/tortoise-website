@@ -6,10 +6,11 @@ import "./globals.css";
 const sans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-dm-sans", display: "swap" });
 const serif = Fraunces({ subsets: ["latin"], weight: ["500", "600"], variable: "--font-dm-serif", display: "swap" });
 const mono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-dm-mono", display: "swap" });
-const publicOrigin = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const metadataBase = publicOrigin
-  ? new URL(publicOrigin.startsWith("http") ? publicOrigin : `https://${publicOrigin}`)
-  : new URL("http://localhost:3000");
+const metadataBase = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL ??
+    process.env.CF_PAGES_URL ??
+    "https://tortoise-website.pages.dev",
+);
 
 export const metadata: Metadata = {
   metadataBase,
