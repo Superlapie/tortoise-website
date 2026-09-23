@@ -400,7 +400,7 @@ export function LandingPage() {
       <main className="site-main relative z-[1]" id="main">
         <section className="hero section-wrap relative grid items-center" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <div className="eyebrow reveal"><span className="eyebrow-dot" /> WINDOWS DRIVER CARE · BUILT WITH CAUTION</div>
+            <div className="eyebrow reveal"><span className="eyebrow-dot" /> WINDOWS DRIVER CARE · BUILT TO KNOW WHEN TO STOP</div>
             <h1 className="reveal" id="hero-title">Driver updates,<br /><em>with the why</em><br />included.</h1>
             <p className="hero-lede reveal">Know what’s installed. Understand what Windows recommends. See the reasoning and risk before you decide what happens next.</p>
             <div className="hero-actions reveal flex flex-wrap items-center gap-3">
@@ -420,6 +420,7 @@ export function LandingPage() {
             <div className="hero-visual-glow" aria-hidden="true" />
             <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
             <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
+            <div className="hero-coordinate" aria-hidden="true"><span>TR / 01</span><i /> SYSTEM CARE, AT A HUMAN PACE</div>
             <div className="hero-mascot-wrap" data-parallax>
               <Image className="hero-mascot" src="/images/tortoise-hero.webp" alt="A sculpted green tortoise mascot with a shell patterned like connected devices." width={1100} height={1100} priority sizes="(max-width: 820px) 92vw, 54vw" />
             </div>
@@ -491,7 +492,7 @@ export function LandingPage() {
 
                   <div className="app-content">
                     <div className="app-page-head">
-                      <div><span className="app-overline">{activeTab === "overview" ? "MONDAY · SAMPLE SCAN" : activeTab.toUpperCase()}</span><h3>{demoTabs.find((tab) => tab.id === activeTab)?.label}</h3></div>
+                      <div><span className="app-overline">{activeTab === "overview" ? "SAMPLE SYSTEM · WINDOWS 11" : activeTab.toUpperCase()}</span><h3>{demoTabs.find((tab) => tab.id === activeTab)?.label}</h3></div>
                       <button className="scan-button" type="button" onClick={handleScanPreview}><span>{scanComplete ? "✓" : "↻"}</span>{scanComplete ? "Preview refreshed" : "Scan preview"}</button>
                     </div>
                     <DemoPanel activeTab={activeTab} explanationOpen={explanationOpen} setExplanationOpen={setExplanationOpen} />
