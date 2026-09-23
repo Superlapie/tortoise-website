@@ -45,9 +45,9 @@ Cloudflare Pages Git integration deploys production changes from `main` and crea
 
 ## Artwork and UI preview
 
-- `public/images/tortoise-hero.webp` is the optimized generated hero illustration.
-- `assets/source/tortoise-hero.png` is its original PNG source.
+- `src/components/product-preview.tsx` renders a static, interactive preview of the Windows app. Its radio controls and screen states work without client-side JavaScript; all data is clearly labeled as illustrative.
+- `assets/source/tortoise-hero.png` and `assets/source/tortoise-hero.webp` preserve the generated mascot artwork for future use. The landing page does not load it.
 - `assets/source/logo-concepts.png` preserves the generated logo exploration sheet.
 - `public/tortoise-mark.svg` is the site mark redrawn from the selected concept.
 
-The in-page product interface is an illustrative preview with synthetic example data. It is labeled as such and is not a screenshot or a live scan.
+The app interface is an illustrative preview, not a product screenshot or a live scan.
