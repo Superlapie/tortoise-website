@@ -19,9 +19,9 @@ const metadataBase = new URL(
 
 export const metadata: Metadata = {
   metadataBase,
-  title: "Tortoise — Windows driver updates, with the why included",
+  title: "Tortoise — A paper trail for every driver change",
   description:
-    "A transparent Windows driver inventory and update utility. See what is installed, what Windows recommends, and the reasoning and risk behind a plan before anything changes.",
+    "A safety-first Windows 11 driver utility. Trace local device inventory and Windows Update offers into a reviewable plan. Driver installation is disabled in public builds.",
   applicationName: "Tortoise",
   keywords: [
     "Windows driver management",
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "Tortoise — Windows driver updates, with the why included",
+    title: "Tortoise — A paper trail for every driver change",
     description:
-      "See what is installed, what Windows recommends, and the reasoning and risk behind a plan.",
+      "Trace local device inventory and Windows Update offers into a reviewable plan. Driver installation is disabled in public builds.",
     siteName: "Tortoise",
   },
   twitter: {
     card: "summary",
-    title: "Tortoise — Windows driver updates, with the why included",
+    title: "Tortoise — A paper trail for every driver change",
     description: "Transparent Windows driver inventory and update review.",
   },
   icons: {
