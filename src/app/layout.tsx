@@ -1,9 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Instrument_Serif } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans", display: "swap" });
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
+  display: "swap",
+});
 const metadataBase = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ??
     process.env.CF_PAGES_URL ??
@@ -42,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#14251c",
+  themeColor: "#f2eee3",
   colorScheme: "light",
 };
 
@@ -52,7 +59,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={`${geist.variable} ${instrument.variable}`}>
       <body>
         <a className="skip-link" href="#main">
           Skip to content

@@ -127,7 +127,7 @@ export function ProductPreview() {
         <div className="desktop-body">
           <aside className="desktop-sidebar">
             <div className="desktop-identity"><strong>Tortoise</strong><span>Transparent Windows<br />driver management.</span></div>
-            <div className="desktop-nav">
+            <div className="workspace-tabs">
               {pages.map((page) => (
                 <label key={page.id} className="desktop-nav-item" htmlFor={`preview-${page.id}`}>
                   <PreviewIcon icon={page.icon} />{page.label}

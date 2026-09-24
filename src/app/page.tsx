@@ -1,5 +1,5 @@
-import { LandingPage } from "@/components/cinematic-landing-page";
+import { FieldManualPage } from "@/components/field-manual-page";
 
 export default function Page() {
-  return <LandingPage />;
+  return <FieldManualPage />;
 }
